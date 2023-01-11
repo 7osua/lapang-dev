@@ -1,0 +1,87 @@
+* {
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(to bottom right, #e60000, #0761d1) center /
+		cover no-repeat #000;
+}
+
+main {
+	overflow: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 20rem;
+	width: 100%;
+	max-height: 30rem;
+	height: 100%;
+	background: #0006;
+}
+
+.next-accordion {
+	padding: 0.25rem;
+	display: block;
+	background: #0761d122;
+	color: #3291ff;
+}
+
+.next-accordion:hover,
+.next-accordion:active {
+	color: #fff;
+	background: #0761d166;
+}
+
+.accordion {
+	background: #000;
+	outline: none;
+	border: none;
+	width: 100%;
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0.5rem;
+	transition: 200ms;
+	color: #888;
+}
+
+.accordion::after {
+	content: "\02795";
+	float: right;
+	font-size: 0.75rem;
+}
+
+.active::after {
+	content: "\02796";
+}
+
+.panel {
+	padding: 1rem;
+	background: #000;
+	overflow: hidden;
+	display: none;
+}
+
+.panel__animated {
+	padding: 0 1rem;
+	background: #000;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 200ms ease-in-out;
+}
+
+.active,
+.accordion:hover {
+	background: #111;
+	color: #fff;
+}
+
+.panel p,
+.panel__animated p {
+	line-height: 1.5rem;
+}
